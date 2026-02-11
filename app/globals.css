@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-black text-black dark:text-white;
+  }
+}
+
+@layer components {
+  .formulario-container {
+    @apply max-w-2xl mx-auto p-6 bg-white dark:bg-zinc-900 rounded-lg shadow-lg;
+  }
+
+  .campo-formulario {
+    @apply mb-4;
+  }
+
+  .campo-formulario label {
+    @apply block mb-2 font-semibold text-sm text-gray-700 dark:text-gray-300;
+  }
+
+  .campo-formulario input,
+  .campo-formulario textarea {
+    @apply w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-zinc-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .mensaje-exito {
+    @apply mb-4 p-4 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-md;
+  }
+
+  .mensaje-error {
+    @apply mb-4 p-4 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-md;
+  }
+
+  .admin-container {
+    @apply max-w-6xl mx-auto p-6;
+  }
+
+  .contactos-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6;
+  }
+
+  .contacto-card {
+    @apply p-4 bg-white dark:bg-zinc-800 rounded-lg shadow border-l-4 border-blue-500;
+  }
+
+  .contacto-card.leido {
+    @apply border-l-4 border-gray-400 opacity-75;
+  }
+
+  .contacto-card.no-leido {
+    @apply border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-900;
+  }
+
+  .contacto-header {
+    @apply flex justify-between items-start mb-3;
+  }
+
+  .contacto-header h3 {
+    @apply font-bold text-lg text-black dark:text-white;
+  }
+
+  .contacto-header .fecha {
+    @apply text-sm text-gray-500 dark:text-gray-400;
+  }
+
+  .contacto-card p {
+    @apply text-sm text-gray-800 dark:text-gray-200 mb-2;
+  }
+
+  .contacto-card button {
+    @apply mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-md text-sm font-medium transition-colors;
+  }
+}
